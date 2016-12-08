@@ -1,0 +1,9 @@
+task helloWorld << {
+    println "Hello World"
+}
+
+
+task copyFile(type: Copy){
+	from "src"
+	into "dis"
+}
