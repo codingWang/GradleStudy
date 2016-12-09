@@ -1,0 +1,28 @@
+apply plugin: GreetingPlugin
+//给拓展赋值
+greeting {
+    message = 'Hi'
+    greeter = 'Gradle'
+}
+
+class GreetingPlugin implements Plugin<Project> {
+
+    void apply(Project project) {
+
+        project.extensions.create("greeting", GreetingPluginExtension)
+        
+        project.task('hello') {
+            doLast {
+                println "${project.greeting.message} from ${project.greeting.greeter}"
+                	
+                //-->Hi from Gradle
+            }
+        }
+    }
+
+}
+
+class GreetingPluginExtension {
+    String message
+    String greeter
+}
