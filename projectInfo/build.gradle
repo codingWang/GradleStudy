@@ -1,0 +1,19 @@
+println name  //projectInfo
+task check<<{  
+        //项目名  
+        println "project.name =" + project.name  //project.name =projectInfo
+        //项目相对路径  
+        println "project.path="+project.path //project.path=: 
+        //项目描述  
+        println "project.description  ="+project.description  //project.description  =null
+        //项目的绝对路径  
+        println "project.projectDir  ="+project.projectDir  //project.projectDir  =D:\gradleProject\projectInfo
+        //项目的build文件绝对路径  
+        println "project.buildDir  ="+project.buildDir  //project.buildDir  =D:\gradleProject\projectInfo\build
+        //项目所在的group  
+        println "project.group="+project.group  //project.group=
+        //项目的版本号  
+        println "project.version  ="+project.version  //project.version  =unspecified
+        //项目的ant对象  
+        println "project.ant  ="+project.ant  //project.ant  =org.gradle.api.internal.project.DefaultAntBuilder@67bd11e3
+}  
